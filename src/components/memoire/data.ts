@@ -141,4 +141,3 @@ export function todayLabelFr(): string {
   const d = new Date();
   return `${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`;
 }
-

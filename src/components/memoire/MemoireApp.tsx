@@ -137,15 +137,9 @@ export function MemoireApp() {
             />
           )}
           {activeTab === "memory" && (
-            <MemoryTab
-              memories={memories}
-              loading={memoriesLoading}
-              onAdd={handleAddMemory}
-            />
+            <MemoryTab memories={memories} loading={memoriesLoading} onAdd={handleAddMemory} />
           )}
-          {activeTab === "settings" && (
-            <SettingsTab settings={settings} onChange={setSettings} />
-          )}
+          {activeTab === "settings" && <SettingsTab settings={settings} onChange={setSettings} />}
         </div>
       </main>
 

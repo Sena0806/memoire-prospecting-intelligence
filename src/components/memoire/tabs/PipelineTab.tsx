@@ -77,7 +77,12 @@ function AnimatedValue({ raw }: { raw: string }) {
   const suffix = match ? match[2] : "";
   const count = useCountUp(target ?? 0, 1400);
   if (target === null) return <>{raw}</>;
-  return <>{count}{suffix}</>;
+  return (
+    <>
+      {count}
+      {suffix}
+    </>
+  );
 }
 
 function MetricCard({
@@ -98,7 +103,10 @@ function MetricCard({
     >
       <div>
         <div className="text-[11px] uppercase tracking-wider text-muted-foreground">{label}</div>
-        <div className="anim-pop mt-1 text-2xl font-bold text-foreground" style={{ animationDelay: `${delay + 100}ms` }}>
+        <div
+          className="anim-pop mt-1 text-2xl font-bold text-foreground"
+          style={{ animationDelay: `${delay + 100}ms` }}
+        >
           <AnimatedValue raw={value} />
         </div>
       </div>
@@ -136,7 +144,9 @@ export function PipelineTab({
       result.results.forEach((r) => {
         onUpdateProspect(r.id, r.success ? "sent" : "error");
       });
-      toast.success(`${result.sent} email(s) envoyé(s)${result.failed > 0 ? ` · ${result.failed} erreur(s)` : ""}`);
+      toast.success(
+        `${result.sent} email(s) envoyé(s)${result.failed > 0 ? ` · ${result.failed} erreur(s)` : ""}`,
+      );
     } catch (err) {
       const msg = err instanceof Error ? err.message : "Erreur";
       toast.error(msg);
@@ -224,7 +234,9 @@ export function PipelineTab({
                 <TableCell className="text-foreground">{p.lastName}</TableCell>
                 <TableCell className="text-muted-foreground">{p.position}</TableCell>
                 <TableCell className="font-medium text-foreground/85">{p.company}</TableCell>
-                <TableCell className="font-mono text-[12px] text-muted-foreground">{p.email}</TableCell>
+                <TableCell className="font-mono text-[12px] text-muted-foreground">
+                  {p.email}
+                </TableCell>
                 <TableCell>
                   <StatusBadge status={p.status} />
                 </TableCell>

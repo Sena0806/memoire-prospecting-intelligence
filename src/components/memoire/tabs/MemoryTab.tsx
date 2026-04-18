@@ -13,10 +13,7 @@ interface MemoryTabProps {
   onAdd: (m: MemoryEntry) => void;
 }
 
-const OUTCOME_META: Record<
-  MemoryOutcome,
-  { label: string; cls: string; glow: string }
-> = {
+const OUTCOME_META: Record<MemoryOutcome, { label: string; cls: string; glow: string }> = {
   signed: {
     label: "✅ Client signé",
     cls: "bg-success/15 text-success border-success/30",
@@ -42,10 +39,7 @@ export function MemoryTab({ memories, loading = false, onAdd }: MemoryTabProps) 
     const q = query.trim().toLowerCase();
     if (!q) return memories;
     return memories.filter((m) =>
-      [m.company, m.contact, m.note, m.campaignName ?? ""]
-        .join(" ")
-        .toLowerCase()
-        .includes(q),
+      [m.company, m.contact, m.note, m.campaignName ?? ""].join(" ").toLowerCase().includes(q),
     );
   }, [memories, query]);
 
@@ -79,10 +73,7 @@ export function MemoryTab({ memories, loading = false, onAdd }: MemoryTabProps) 
           Chargement de la mémoire…
         </div>
       ) : isEmpty ? (
-        <EmptyState
-          variant="memory-empty"
-          onAction={() => setOpen(true)}
-        />
+        <EmptyState variant="memory-empty" onAction={() => setOpen(true)} />
       ) : isSearchEmpty ? (
         <EmptyState variant="memory-search" />
       ) : (

@@ -56,21 +56,17 @@ export function EmptyState({ variant, onAction }: EmptyStateProps) {
   return (
     <div className="anim-fade-in col-span-full flex flex-col items-center justify-center py-24 text-center">
       {imageSrc ? (
-        <img 
-          src={imageSrc} 
-          alt="" 
-          className="mb-6 h-20 w-20 object-contain" 
-          fetchPriority="low" 
-          loading="lazy" 
+        <img
+          src={imageSrc}
+          alt=""
+          className="mb-6 h-20 w-20 object-contain"
+          fetchPriority="low"
+          loading="lazy"
         />
       ) : (
         <div className="relative mb-6">
-          <div
-            className={`absolute inset-0 -m-3 rounded-full opacity-40 ${ringCls}`}
-          />
-          <div
-            className={`absolute inset-0 -m-6 rounded-full opacity-20 ${ringCls}`}
-          />
+          <div className={`absolute inset-0 -m-3 rounded-full opacity-40 ${ringCls}`} />
+          <div className={`absolute inset-0 -m-6 rounded-full opacity-20 ${ringCls}`} />
           <div
             className={`relative flex h-20 w-20 items-center justify-center rounded-full ${ringCls}`}
           >

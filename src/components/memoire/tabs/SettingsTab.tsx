@@ -23,12 +23,7 @@ interface SettingsTabProps {
 function StatusDot({ tone }: { tone: "success" | "destructive" }) {
   const Icon = tone === "success" ? CheckCircle : XCircle;
   return (
-    <Icon
-      className={cn(
-        "h-4 w-4",
-        tone === "success" ? "text-success" : "text-destructive",
-      )}
-    />
+    <Icon className={cn("h-4 w-4", tone === "success" ? "text-success" : "text-destructive")} />
   );
 }
 
@@ -46,10 +41,7 @@ function SectionCard({
   delay: number;
 }) {
   return (
-    <div
-      className="glass anim-fade-in rounded-xl p-6"
-      style={{ animationDelay: `${delay}ms` }}
-    >
+    <div className="glass anim-fade-in rounded-xl p-6" style={{ animationDelay: `${delay}ms` }}>
       <div className="mb-4 flex items-center justify-between">
         <h3 className="text-base font-semibold text-foreground">{title}</h3>
         <span className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/40 px-2.5 py-1 text-[11px] text-foreground/75">
@@ -107,7 +99,9 @@ export function SettingsTab({ settings, onChange }: SettingsTabProps) {
       <SectionCard
         title="Backend API"
         status={apiStatus === "ok" ? "success" : "destructive"}
-        statusLabel={apiStatus === "ok" ? "Connecté" : apiStatus === "error" ? "Erreur" : "Non testé"}
+        statusLabel={
+          apiStatus === "ok" ? "Connecté" : apiStatus === "error" ? "Erreur" : "Non testé"
+        }
         delay={0}
       >
         <div className="space-y-3">
@@ -136,12 +130,7 @@ export function SettingsTab({ settings, onChange }: SettingsTabProps) {
       </SectionCard>
 
       {/* Amazon Bedrock */}
-      <SectionCard
-        title="Amazon Bedrock"
-        status="success"
-        statusLabel="Actif"
-        delay={150}
-      >
+      <SectionCard title="Amazon Bedrock" status="success" statusLabel="Actif" delay={150}>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <div className="space-y-2">
             <Label htmlFor="model">Modèle Claude</Label>
@@ -204,7 +193,8 @@ export function SettingsTab({ settings, onChange }: SettingsTabProps) {
               className="bg-background/60 font-mono text-xs"
             />
             <p className="text-[11px] text-foreground/40">
-              Si renseigné, tous les emails sont redirigés vers cette adresse avec le destinataire réel en objet — idéal pour les démonstrations.
+              Si renseigné, tous les emails sont redirigés vers cette adresse avec le destinataire
+              réel en objet — idéal pour les démonstrations.
             </p>
           </div>
         </div>

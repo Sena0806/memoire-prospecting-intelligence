@@ -60,15 +60,15 @@ export function NewCampaignTab({ settings, onLaunch }: NewCampaignTabProps) {
       clearInterval(interval);
       toast.success(
         <div className="flex items-center gap-3">
-          <img 
-            src="/illustrations/campaign-success.png" 
-            alt="" 
-            className="h-10 w-10 object-contain" 
-            fetchPriority="low" 
-            loading="lazy" 
+          <img
+            src="/illustrations/campaign-success.png"
+            alt=""
+            className="h-10 w-10 object-contain"
+            fetchPriority="low"
+            loading="lazy"
           />
           <span>{result.prospects.length} prospects trouvés !</span>
-        </div>
+        </div>,
       );
       onLaunch({ sector, area, count, pitch, tone }, result);
     } catch (err) {
@@ -197,7 +197,8 @@ export function NewCampaignTab({ settings, onLaunch }: NewCampaignTabProps) {
           </Button>
 
           <p className="pt-1 text-center text-[11px] text-foreground/45">
-            Les emails sont générés par Amazon Bedrock (Claude) et personnalisés pour chaque prospect.
+            Les emails sont générés par Amazon Bedrock (Claude) et personnalisés pour chaque
+            prospect.
           </p>
         </form>
       </div>

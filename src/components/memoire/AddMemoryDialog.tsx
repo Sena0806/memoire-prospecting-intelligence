@@ -26,7 +26,12 @@ interface AddMemoryDialogProps {
   addedBy?: string;
 }
 
-export function AddMemoryDialog({ open, onOpenChange, onAdd, addedBy = "Équipe 2025-2026" }: AddMemoryDialogProps) {
+export function AddMemoryDialog({
+  open,
+  onOpenChange,
+  onAdd,
+  addedBy = "Équipe 2025-2026",
+}: AddMemoryDialogProps) {
   const [company, setCompany] = useState("");
   const [contact, setContact] = useState("");
   const [outcome, setOutcome] = useState<MemoryOutcome>("followup");
@@ -48,7 +53,11 @@ export function AddMemoryDialog({ open, onOpenChange, onAdd, addedBy = "Équipe 
       outcome,
       note,
       addedBy,
-      addedDate: new Date().toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }),
+      addedDate: new Date().toLocaleDateString("fr-FR", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+      }),
     });
     reset();
   };

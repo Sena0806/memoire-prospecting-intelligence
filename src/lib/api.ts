@@ -1,4 +1,9 @@
-import type { CampaignForm, MemoryEntry, Prospect, SettingsState } from "@/components/memoire/types";
+import type {
+  CampaignForm,
+  MemoryEntry,
+  Prospect,
+  SettingsState,
+} from "@/components/memoire/types";
 
 export interface CampaignResponse {
   campaignName: string;
@@ -34,10 +39,7 @@ export async function runCampaign(
   return res.json();
 }
 
-export async function sendEmail(
-  prospect: Prospect,
-  settings: SettingsState,
-): Promise<void> {
+export async function sendEmail(prospect: Prospect, settings: SettingsState): Promise<void> {
   const res = await fetch(`${settings.apiBaseUrl}/api/send-email`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },

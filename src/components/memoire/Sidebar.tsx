@@ -19,7 +19,6 @@ const navItems: { key: TabKey; label: string; Icon: typeof FilePlus2 }[] = [
 export function Sidebar({ activeTab, onTabChange, onCampaignClick, campaigns }: SidebarProps) {
   return (
     <aside className="sidebar-mesh flex h-screen w-[260px] shrink-0 flex-col border-r border-sidebar-border">
-
       {/* Brand */}
       <div className="px-5 pb-4 pt-6">
         <div className="flex items-center gap-2.5">
@@ -61,7 +60,14 @@ export function Sidebar({ activeTab, onTabChange, onCampaignClick, campaigns }: 
                   {active && (
                     <span className="absolute left-0 top-1/2 h-5 w-[3px] -translate-y-1/2 rounded-r-full bg-primary" />
                   )}
-                  <Icon className={cn("h-4 w-4 shrink-0", active ? "text-primary" : "text-muted-foreground/70 group-hover:text-foreground/70")} />
+                  <Icon
+                    className={cn(
+                      "h-4 w-4 shrink-0",
+                      active
+                        ? "text-primary"
+                        : "text-muted-foreground/70 group-hover:text-foreground/70",
+                    )}
+                  />
                   <span>{label}</span>
                 </button>
               </li>
@@ -101,14 +107,14 @@ export function Sidebar({ activeTab, onTabChange, onCampaignClick, campaigns }: 
       {/* Bottom team card */}
       <div className="relative mt-auto overflow-hidden p-4">
         {/* Optional decorative texture */}
-        <img 
-          src="/illustrations/sidebar-texture.png" 
-          alt="" 
-          className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover opacity-50 mix-blend-multiply dark:mix-blend-screen" 
-          fetchPriority="low" 
-          loading="lazy" 
+        <img
+          src="/illustrations/sidebar-texture.png"
+          alt=""
+          className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover opacity-50 mix-blend-multiply dark:mix-blend-screen"
+          fetchPriority="low"
+          loading="lazy"
         />
-        
+
         <div className="relative z-10 rounded-lg border border-border bg-muted/60 px-4 py-3 backdrop-blur-sm">
           <div className="text-sm font-semibold text-foreground">Équipe 2025–2026</div>
           <div className="mt-1 text-[11px] text-muted-foreground">

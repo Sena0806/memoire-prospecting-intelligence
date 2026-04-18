@@ -50,9 +50,7 @@ export function EmailPreviewDialog({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-2xl border-border bg-card">
         <DialogHeader>
-          <DialogTitle className="text-xl font-bold text-foreground">
-            Aperçu de l'email
-          </DialogTitle>
+          <DialogTitle className="text-xl font-bold text-foreground">Aperçu de l'email</DialogTitle>
         </DialogHeader>
 
         <div className="space-y-3 rounded-lg border border-border bg-muted/40 p-4 text-sm">
@@ -62,7 +60,9 @@ export function EmailPreviewDialog({
           </div>
           <div className="flex gap-2">
             <span className="w-16 shrink-0 text-muted-foreground">À</span>
-            <span className="font-mono text-[12px] font-medium text-foreground">{prospect.email}</span>
+            <span className="font-mono text-[12px] font-medium text-foreground">
+              {prospect.email}
+            </span>
           </div>
           <div className="flex gap-2">
             <span className="w-16 shrink-0 text-muted-foreground">Objet</span>

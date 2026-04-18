@@ -25,9 +25,7 @@ export function TabNav({ active, onChange }: TabNavProps) {
             onClick={() => onChange(t.key)}
             className={cn(
               "relative px-4 py-2 text-sm font-medium transition-colors",
-              isActive
-                ? "text-primary"
-                : "text-muted-foreground hover:text-foreground",
+              isActive ? "text-primary" : "text-muted-foreground hover:text-foreground",
             )}
           >
             {t.label}

@@ -36,10 +36,7 @@ export interface Campaign {
   prospectCount: number;
 }
 
-export type EmailTone =
-  | "Professionnel et formel"
-  | "Professionnel et amical"
-  | "Direct et concis";
+export type EmailTone = "Professionnel et formel" | "Professionnel et amical" | "Direct et concis";
 
 export interface CampaignForm {
   sector: string;
