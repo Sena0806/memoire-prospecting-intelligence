@@ -38,3 +38,7 @@ backend/.venv/
 # Internal hackathon docs — not for submission
 docs/
 PROGRESS.md
+node-compile-cache/
+.*.node-gyp/
+node_modules/
+bun.lockb
