@@ -4,6 +4,13 @@
 
 Mémoire automates B2B prospecting for Junior-Enterprises (JEs): it searches for French companies via a public government API, generates personalised outreach emails using Amazon Bedrock, and preserves institutional knowledge across yearly team rotations in Google Sheets.
 
+## Live Demo
+
+| | URL |
+|---|---|
+| **Frontend** | https://mem-spark-genius.lovable.app |
+| **Backend API** | https://memoire-prospecting-intelligence-production.up.railway.app/docs |
+
 ---
 
 ## Architecture
