@@ -111,7 +111,7 @@ export const recentCampaigns: Campaign[] = [
 ];
 
 export const defaultSettings: SettingsState = {
-  apiBaseUrl: "http://localhost:8000",
+  apiBaseUrl: "https://memoire-prospecting-intelligence-production.up.railway.app",
   fromEmail: "onboarding@resend.dev",
   demoRedirect: "",
   bedrockModel: "Claude 3.5 Sonnet",
