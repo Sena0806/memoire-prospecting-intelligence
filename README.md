@@ -11,6 +11,15 @@ Mémoire automates B2B prospecting for Junior-Enterprises (JEs): it searches for
 | **Frontend** | https://mem-spark-genius.lovable.app |
 | **Backend API** | https://memoire-prospecting-intelligence-production.up.railway.app/docs |
 
+## Try It (2 minutes)
+
+1. Open **https://mem-spark-genius.lovable.app**
+2. Go to **Nouvelle campagne** — enter a sector (e.g. `Industrie mécanique`) and area (e.g. `Nantes`) → click **Lancer**
+3. Go to **Pipeline** — review the AI-generated personalised emails → click **Approuver et Envoyer**
+4. Go to **Mémoire** — browse the collective memory of past deals
+
+> No configuration needed — the backend is already connected.
+
 ---
 
 ## Architecture
